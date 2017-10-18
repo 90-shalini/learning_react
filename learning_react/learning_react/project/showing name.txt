@@ -1,0 +1,51 @@
+class Dropdown extends React.Component{
+	constructor(props){
+  	super(props);
+    this.state = {selectedEnvironment: ''};
+  };
+  handleChange = (event) =>{
+  this.setState({selectedEnvironment: event.target.value});
+  };
+  render() {
+        return ( <div>
+        <select onChange={this.handleChange}>
+            {this.props.envs.map(env => <Env key={env.name}{...env}/>
+                  )}
+        </select>
+        <h5>Selected Environment:{this.state.selectedEnvironment}</h5>
+         </div>
+        );
+    }
+}
+const Env = (props) => {
+      return ( <option >{props.name}</option>
+      );
+  };
+
+class App extends React.Component{
+  constructor() {
+      super();
+      this.state = {envs: []};
+
+  }
+
+  componentDidMount() {
+      axios.get('http://localhost:4000/ui')
+          .then(response => {
+              this.setState({envs: response.data})
+          })
+          .catch(function (error) {
+              console.log(error);
+          });
+  }
+
+  render(){
+      return(
+          <div>
+              <Dropdown envs={this.state.envs} />
+          </div>
+      );
+  }
+}
+ReactDOM.render(
+      <App/> , mountNode)

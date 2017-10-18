@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Chart2</title>
+
+    <script type="text/javascript" src="https://unpkg.com/react@0.13.3/dist/JSXTransformer.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/fusioncharts/fusioncharts.js"></script>
+    <script src="http://fb.me/react-js-fiddle-integration.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/react-fusioncharts/dist/react-fusioncharts.js"></script>
+
+</head>
+
+<body>
+<div id="chart-container"></div>
+<script type="text/babel">
+
+    FusionCharts.ready(function () {
+        var myDataSource = {
+            chart: {
+                caption: "Age profile of website visitors",
+                subcaption: "Last Year",
+                startingangle: "120",
+                showlabels: "0",
+                showlegend: "1",
+                enablemultislicing: "0",
+                slicingdistance: "15",
+                showpercentvalues: "1",
+                showpercentintooltip: "0",
+                plottooltext: "Age group : $label Total visit : $datavalue",
+                theme: "ocean"
+            },
+            data: [{
+                label: "Teenage",
+                value: "1250400"
+            }, {
+                label: "Adult",
+                value: "1463300"
+            }, {
+                label: "Mid-age",
+                value: "1050700"
+            }, {
+                label: "Senior",
+                value: "491000"
+            }]
+        };
+
+        var chartConfigs = {
+            id: "age-profile-chart",
+            renderAt: "age-profile-chart-container",
+            type: "pie3d",
+            width: 500,
+            height: 400,
+            dataFormat: "json",
+            dataSource: myDataSource
+        };
+
+        ReactDOM.render( < ReactFC {...chartConfigs
+                                   }
+                />,
+            document.getElementById("chart-container")
+        );
+    });
+
+</script>
+</body>
+</html>

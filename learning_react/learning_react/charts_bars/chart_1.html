@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Chart1</title>
+
+    <script type="text/javascript" src="https://unpkg.com/react@0.13.3/dist/JSXTransformer.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/fusioncharts/fusioncharts.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/react-fusioncharts/dist/react-fusioncharts.js"></script>
+</head>
+<body>
+<div id="chart-container"></div>
+<script type="text/babel">
+
+    FusionCharts.ready(function () {
+        var myDataSource = {
+            chart: {
+                caption: "Modules Distribution",
+                subCaption: "Top 5 modules under automation",
+                //numberPrefix: "$",
+                theme: "ocean"
+            },
+            data: [{
+                label: "Module 1",
+                value: "8"
+            }, {
+                label: "Module 2",
+                value: "7"
+            }, {
+                label: "Module 3",
+                value: "6"
+            }, {
+                label: "Module 4",
+                value: "5"
+            }, {
+                label: "Module 5",
+                value: "3"
+            }]
+        };
+
+
+        var revenueChartConfigs = {
+            id: "revenue-chart",
+            renderAt: "revenue-chart-container",
+            type: "column2d",
+            width: 500,
+            height: 400,
+            dataFormat: "json",
+            dataSource: myDataSource
+        };
+
+        ReactDOM.render( <ReactFC {...revenueChartConfigs} />,document.getElementById('chart-container'));
+    });
+
+    </script>
+</body>
+</html>

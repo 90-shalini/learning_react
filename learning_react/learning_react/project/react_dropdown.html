@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Env dropdown</title>
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div id="dropdown_test"></div>
+<script type="text/babel">
+    const Env = (props) => {
+        return ( <option value="{props.env.name}">{props.env.name}</option>
+        );
+    };
+
+    const EnvList = (props) => {
+        return (
+          <div>
+              <select >
+                  {props.envs.map(env => (
+                          <option value="{env.name}">{env.name}</option>
+                  ))}
+              </select>
+
+          </div>
+        );
+    }
+
+    class Form extends React.Component{
+        state= {envName:''}
+        onChange = (event) =>{
+            console.log('event triggered');
+            this.setState({envName: " "})
+        };
+        render(){
+            return(
+                <form>
+                    <h3>Selected Env:</h3>
+                    <h3>{this.state.envName}</h3>
+                </form>
+            )
+        }
+    }
+
+    class App extends React.Component{
+        constructor() {
+            super();
+            this.state = {envs: []};
+        }
+
+        componentDidMount() {
+            axios.get('http://localhost:4000/ui')
+                .then(response => {
+                    this.setState({envs: response.data})
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        }
+
+        render(){
+            return(
+                <div>
+                    <EnvList envs={this.state.envs} />
+                    <Form/>
+                </div>
+            );
+        }
+    }
+
+
+
+    ReactDOM.render(
+            <App/>
+        , document.getElementById('dropdown_test'))</script>
+</body>
+</html>

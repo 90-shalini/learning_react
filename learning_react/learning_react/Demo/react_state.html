@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>State</title>
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<script type="text/babel">
+    class Comment extends React.Component{
+            constructor(props){
+                super(props);
+                this.state={editing: false};
+            }
+            edit() {
+                this.setState({editing: true});
+            }
+            save() {
+                this.setState({editing: false});
+            }
+            remove() {
+                alert('removing text!!');
+            }
+
+            renderNormal() {
+                return (
+                        <div className="commentContainer">
+                            <div className="commentText">{this.props.children}</div>
+                            <button onClick={this.edit.bind(this)} className="button-primary">Edit</button>
+                            <button onClick={this.remove.bind(this)} className="button-danger">Remove</button>
+                        </div>
+                );
+            }
+
+            renderForm() {
+                return (
+                        <div className="commentContainer">
+                            <textarea defaultValue={this.props.children}></textarea>
+                            <button onClick={this.save.bind(this)} className="button-success">Save</button>
+                        </div>
+                );
+            }
+
+            render() {
+                console.log(this.state.editing);
+                if (this.state.editing) {
+                    return this.renderForm();
+                } else {
+                    return this.renderNormal();
+                }
+            };
+        }
+
+    ReactDOM.render(<div className="Board">
+        <Comment>Burger</Comment>
+        <Comment>Salad</Comment>
+    </div>, document.getElementById('container'));
+</script>
+</body>
+</html>

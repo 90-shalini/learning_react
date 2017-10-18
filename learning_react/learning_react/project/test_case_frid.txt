@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Env dropdown</title>
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-table/6.5.3/react-table.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="dropdown_test"></div>
+<script type="text/babel">
+
+    class Dropdown extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {selectedEnvironment: ''};
+        };
+
+        handleChange = (event) => {
+            this.setState({selectedEnvironment: event.target.value});
+        };
+
+        render() {
+            return ( <div>
+                        <select onChange={this.handleChange}>
+                            {this.props.envs.map(env => <Env key={env.name}{...env}/>
+                            )}
+                        </select>
+                        <h3>Selected Environment:{this.state.selectedEnvironment}</h3>
+                    </div>
+            );
+        }
+    }
+
+    const Env = (props) => {
+        return ( <option>{props.name}</option>
+        );
+    };
+
+    class TestCase_table extends React.Component{
+        constructor(props){
+            super(props);
+            this.state = {
+                data: [props.data]
+            };
+        }
+
+        render(){
+            return(
+                    <div>
+                        <h3>Test Cases</h3>
+                        <table className="table">
+                            {this.props.data.map((temp)=> (
+                                            <tr>
+                                                <td>{temp.zid}</td>
+                                                <td>{temp.result}</td>
+                                                <td>{temp.last_run}</td>
+                                            </tr>
+                                )
+                            )}
+                        </table>
+                    </div>
+            );
+        }
+    }
+
+    class App extends React.Component {
+        constructor() {
+            super();
+            this.state = {envs: [],table_data:[] };
+
+        }
+
+        componentDidMount() {
+            var dd_url= 'http://'+window.location.hostname+':5000/ui'
+            axios.get(dd_url)
+                .then(response => {
+                    this.setState({envs: response.data})
+                    console.log(response.data)
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+
+            var table_url= 'http://'+window.location.hostname+':5000/ui/all'
+            axios.get(table_url)
+                .then(response => {
+                    this.setState({table_data: response.data});
+                    console.log(response.data);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+
+
+        }
+
+        render() {
+            return (
+                    <div>
+                        <Dropdown envs={this.state.envs}/>
+                        <TestCase_table data={this.state.table_data}/>
+                    </div>
+            );
+        }
+    }
+
+    ReactDOM.render(
+            <App/>, document.getElementById('dropdown_test')) </script>
+    </body>
+    </html>

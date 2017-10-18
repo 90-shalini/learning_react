@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Chart2</title>
+
+    <script type="text/javascript" src="https://unpkg.com/react@0.13.3/dist/JSXTransformer.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/fusioncharts/fusioncharts.js"></script>
+    <script src="http://fb.me/react-js-fiddle-integration.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/react-fusioncharts/dist/react-fusioncharts.js"></script>
+
+</head>
+
+<body>
+<div id="chart-container"></div>
+<script type="text/babel">
+
+    FusionCharts.ready(function () {
+        var completeData = [{
+            label: "Bakersfield Central",
+            category: "Retail",
+            value: "880000",
+            city: "NYC"
+        }, {
+            label: "Garden Groove harbour",
+            category: "General",
+            value: "730000",
+            city: "London"
+        }, {
+            label: "Los Angeles Topanga",
+            value: "590000",
+            category: "Retail",
+            city: "NYC"
+        }, {
+            label: "Compton-Rancho Dom",
+            value: "520000",
+            category: "Retail",
+            city: "NYC"
+        }, {
+            label: "Daly City Serramonte",
+            value: "330000",
+            category: "General",
+            city: "Mumbai"
+        }];
+
+        var revenueChartDataSource = {
+            chart: {
+                caption: "Harry's SuperMart",
+                subCaption: "Top 5 stores in last month by revenue",
+                theme: "ocean"
+            },
+            data: completeData
+        };
+
+        var categoryChartDataSource = {
+            chart: {
+                caption: "Categories of Harry's SuperMart",
+                enablemultislicing: "0",
+                theme: "ocean"
+            },
+            data: [{
+                label: "General",
+                value: 0
+            }, {
+                label: "Retail",
+                value: 0
+            }]
+        };
+
+        for (var i = 0, len = completeData.length; i < len; i++) {
+            if (completeData[i].category == "General") {
+                categoryChartDataSource.data[0].value += 1;
+            } else {
+                categoryChartDataSource.data[1].value += 1;
+            }
+        }
+
+        var MyApp = React.createClass({
+            getInitialState: function () {
+                return {
+                    filterValue: "",
+                    filterSource: ""
+                };
+            },
+            handleUserInput: function (categoryMart, source) {
+                this.setState(function () {
+                    return {
+                        filterValue: categoryMart,
+                        filterSource: source
+                    }
+                });
+            },
+            render: function () {
+                var that = this,
+                    rows = [];
+
+                var revenueChartConfigs = {
+                    id: "revenue-chart",
+                    renderAt: "revenue-chart-container",
+                    type: "column2d",
+                    className: "inline_div",
+                    dataFormat: "json",
+                    dataSource: revenueChartDataSource,
+                    impactedBy: ["category-chart"],
+                    eventSource: this.state.filterSource,
+                    width: 290,
+                    heigth: 350
+                };
+
+                var categoryChartConfigs = {
+                    type: "pie2D",
+                    id: "category-chart",
+                    renderAt: "category-chart-container",
+                    className: "inline_div",
+                    dataFormat: "json",
+                    defaultCenterLabel: "Total revenue: $64.08K",
+                    eventSource: this.state.filterSource,
+                    dataSource: categoryChartDataSource,
+                    width: 300,
+                    heigth: 350,
+                    events: {
+                        slicingStart: function (evt, props) {
+                            if (props.slicedState == false) {
+                                that.handleUserInput(props.data.categoryLabel, evt.sender.id);
+                            } else {
+                                that.handleUserInput("", evt.sender.id);
+                            }
+                        }
+                    }
+                };
+
+                if (that.state.filterValue && that.state.filterValue.length != 0) {
+                    completeData.forEach(function (mart) {
+                        if (mart.category == that.state.filterValue) {
+                            rows.push(mart);
+                        }
+                    });
+                    revenueChartConfigs.dataSource.data = rows;
+                } else {
+                    revenueChartConfigs.dataSource.data = completeData;
+                }
+
+                return (
+                        <div id="interactive-dashbaord">
+                            <div id="categories" class="block"><ReactFC {...categoryChartConfigs} /></div>
+                            <div id="distribution" class="block"><ReactFC {...revenueChartConfigs} /></div>
+                        </div>
+                );
+            }
+        });
+
+
+        ReactDOM.render( <MyApp />,document.getElementById('chart-container'));
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test user_input</title>
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div id="user_input"></div>
+<script type="text/babel">
+    const Card = (props) => {
+        return (
+                <div>
+                    <img width="75" src={props.avatar_url}/>
+                    <div style={{
+                        display:
+                            'inline-block', marginLeft: 10
+                    }}>
+                        <h5 className='info'>{props.name}</h5>
+                        <a>{props.company}</a>
+                    </div>
+                </div>
+        );
+    };
+
+    class Form extends React.Component {
+        state = {userName: ''}
+        handleSubmit = (event) => {
+            event.preventDefault();
+            console.log('event submitted', this.state.userName);
+            axios.get(`https://api.github.com/users/${this.state.userName}`)
+                .then(resp => {
+                    this.props.onSubmit(resp.data);
+                    this.setState({userName:" "})
+                });
+        };
+
+        render() {
+            return (
+                    <form onSubmit={this.handleSubmit}>
+                        <input type="text"
+                               value={this.state.userName}
+                               onChange={(event) => this.setState({userName: event.target.value})}
+                                // ref = {(input) => this.userNameInput = input}
+                               placeholder="Name" required/>
+                        <button type="Submit">Add card</button>
+                    </form>
+            )
+        }
+    }
+
+    const CardList = (props) => {
+        return (
+                <div>
+                    {props.cards.map(card => <Card key={card.id} {...card}/>)}
+
+                </div>
+        );
+    }
+
+    class App extends React.Component {
+        state = {
+            cards: [
+                {
+                    name: "Shalini",
+                    avatar_url: "https://avatars.githubusercontent.com/3",
+                    company: "Planview"
+                },
+                {
+                    name: "Vibhor",
+                    avatar_url: "https://avatars.githubusercontent.com/2",
+                    company: "Cisco"
+                },
+                {
+                    name: "Sakshi",
+                    avatar_url: "https://avatars.githubusercontent.com/4",
+                    company: "JPMC"
+                },
+            ]
+        };
+        addNewCard = (cardInfo) => {
+            this.setState(prevState => ({
+                cards: prevState.cards.concat(cardInfo)
+            }));
+        };
+
+        render() {
+            return (
+                    <div>
+                        <Form onSubmit={this.addNewCard}/>
+                        <CardList cards={this.state.cards}/>
+                    </div>
+            );
+        }
+    }
+
+    ReactDOM.render(
+            <App/>
+        , document.getElementById('user_input'))</script>
+</body>
+</html>

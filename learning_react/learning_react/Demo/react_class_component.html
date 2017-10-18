@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Component</title>
+    <script src="https://fb.me/react-0.14.3.js"></script>
+    <script src="https://fb.me/react-dom-0.14.3.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<div id="Test Class Component"></div>
+<script type="text/babel">
+    class Hello extends React.Component {
+        render() {
+            return <h1>Hello Class component!!</h1>;
+        }
+    }
+
+    ReactDOM.render(<Hello />, document.getElementById("Test Class Component"))
+</script>
+</body>
+</html>
