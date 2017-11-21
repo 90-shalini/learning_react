@@ -1,0 +1,7 @@
+.planview_container .navbar-inverse {
+        border-radius:0;
+        height: 50px;
+    }
+.test_status .glyphicon {
+        float: right;
+    }
