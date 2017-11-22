@@ -14,7 +14,6 @@ class FilterMenu extends React.Component {
         var db_list_url = 'http://'+window.location.hostname+':5000/ui/'+ this.state.selectedEnvironment;
         axios.get(db_list_url)
                 .then(response => {
-                    console.log(response.data);
                     this.setState({db_list: response.data})
                  })
                 .catch(function (error){
@@ -24,25 +23,22 @@ class FilterMenu extends React.Component {
    }
    handleDbChange = (event) => {
    this.setState({selectedDatabase : event.target.value}, () =>{
-   var results_url = 'http://'+window.location.hostname+':5000/ui/tests/' + this.state.selectedEnvironment +'/'+
-                        this.state.selectedDatabase;
-   console.log(results_url)
-   axios.get(results_url)
-        .then(response => {
-            console.log(response.data);
-            this.setState({result_list: response.data})
-         })
-        .catch(function (error){
-            console.log(error)
-        });
+       var results_url = 'http://'+window.location.hostname+':5000/ui/tests/' + this.state.selectedEnvironment +'/'+
+                            this.state.selectedDatabase;
+       axios.get(results_url)
+            .then(results_response => {
+                this.setState({result_list: results_response.data});
+             })
+            .catch(function (error){
+                console.log(error)
+            });
 
-   });
+       });
    }
    componentDidMount(){
     var env_list_url = 'http://'+window.location.hostname+':5000/ui';
     axios.get(env_list_url)
             .then(response => {
-                console.log(response.data);
                 this.setState({env_list: response.data})
              })
             .catch(function (error){
@@ -55,17 +51,19 @@ class FilterMenu extends React.Component {
       var Button = ReactBootstrap.Button;
       var Glyphicon = ReactBootstrap.Glyphicon;
          return (
-             <div id="accordion" class="panel panel-lg panel-custom">
-              <Button onClick={() => this.setState({ open: !this.state.open })}>
-                     <Glyphicon bsStyle="Info" className="glyphicon" glyph="filter"/>
-              </Button>
-              <Panel collapsible defaultExpanded expanded={this.state.open}>
-                <div>
-                    <Env_dropdown envs={this.state.env_list} onChangeSelection={this.handleEnvChange}/>
-                    <DB_dropdown db={this.state.db_list} onChangeSelection={this.handleDbChange}/>
-                    <Results_table results={this.state.result_list}/>
+             <div class="panel panel-lg panel-custom">
+                <div id="filterPane" className="pve_filterWrapper">
+                  <Button onClick={()=>this.setState({open:!this.state.open})}>
+                    <Glyphicon bsStyle="Info" className="glyphicon" glyph="filter"/>
+                </Button>
+                  <Panel collapsible defaultExpanded expanded={this.state.open}>
+                        <Env_dropdown envs={this.state.env_list} onChangeSelection={this.handleEnvChange}/>
+                        <DB_dropdown db={this.state.db_list} onChangeSelection={this.handleDbChange}/>
+                  </Panel>
                 </div>
-              </Panel>
+                <div id="resultsTable" className="pve_resultWrapper">
+                   <Results_table results={this.state.result_list}/>
+                </div>
              </div>
          );
    }
@@ -74,7 +72,6 @@ class FilterMenu extends React.Component {
 class Env_dropdown extends React.Component {
     constructor(props){
         super(props);
-        console.log(this.props);
     };
     render(){
          var envOptions = this.props.envs.map((env) =>{
@@ -93,7 +90,6 @@ class Env_dropdown extends React.Component {
 class DB_dropdown extends React.Component {
     constructor(props){
         super(props);
-        console.log(this.props);
     };
     render(){
         var dbOptions = this.props.db.map((db_name) =>{
@@ -111,29 +107,23 @@ class DB_dropdown extends React.Component {
 class Results_table extends React.Component {
             constructor(props) {
                 super(props);
-                console.log('In results table')
-                this.state = {
-                    results: [props.results]
-                };
-                console.log(this.state.results)
-            }
+             }
             render() {
-       let Table = ReactBootstrap.Table;
-       var resultsRow = this.props.results.map((result_row) => {
-            return
-       })
+       var Table = ReactBootstrapTable.BootstrapTable;
+//       var TableHeaderColumn = ReactBootstrapTable.TableHeaderColumn;
        return (
-           <div id="column_data">
-               <Table ref='table1' className="striped bordered condensed hover">
-                    <TableHeaderColumn dataField='zid' isKey={ true } dataSort={ true }>Zephyr ID</TableHeaderColumn>
-                    <TableHeaderColumn dataField='descr'>Description</TableHeaderColumn>
+
+               <Table ref='table1' data={this.props.results}>
+                    <TableHeaderColumn dataField='zid' isKey={ true } dataSort={ true }>
+                    <a href="">Zephyr ID</a>
+                    </TableHeaderColumn>
                     <TableHeaderColumn dataField='status'>Test Status</TableHeaderColumn>
                     <TableHeaderColumn dataField='last_run'>Last Run</TableHeaderColumn>
                </Table>
-            </div>
+
         );
     }
         }
 
-    ReactDOM.render(<FilterMenu/>, document.getElementById('filter'));
+    ReactDOM.render(<FilterMenu/>, document.getElementById('wrapper'));
 

@@ -18,7 +18,7 @@
 .ProductFilter__section-container select
 {
     min-height: 30px;
-    min-width: 360px;
+    min-width: 210px;
     border: 1px solid #ddd;
     outline: none;
 }
@@ -26,4 +26,15 @@
 .ProductFilter__section-container select:focus
 {
     border: 1px solid darkred;
+}
+
+.pve_filterWrapper{
+    width: 250px;
+    float: left;
+    margin-right: 20px;
+}
+
+.pve_resultWrapper{
+    width: 900px;
+    float: left;
 }
