@@ -27,23 +27,27 @@ class Stats extends React.Component{
                         </Button>
                 </div>
                 <Panel collapsible defaultExpanded expanded={this.state.open}>
-                    <div>
-                      <div>
-                        <span>Total Tests:</span>
-                        <span>{this.state.stat_data['total']}</span>
+                      <div className="total_tests">
+                          <Glyphicon bsStyle="info" className="glyphicon" glyph="info-sign"/>
+                        <span> Total</span>
+                        <span className="total_status">{this.state.stat_data['total']}</span>
                       </div>
-                      <div>
-                        <span>Passed:</span>
-                        <span>{this.state.stat_data['passed']}</span>
+
+                      <div className="table_pass">
+                          <Glyphicon bsStyle="success" className="glyphicon" glyph="ok"/>
+                        <span> Passed</span>
+                        <span className="passed_status">{this.state.stat_data['passed']}</span>
                       </div>
-                      <div>
-                        <span>Failed:</span>
-                        <span>{this.state.stat_data['failed']}</span>
+
+                      <div className="table_fail">
+                          <Glyphicon bsStyle="danger" className="glyphicon" glyph="remove"/>
+                        <span> Failed</span>
+                        <span className="failed_status">{this.state.stat_data['failed']}</span>
                       </div>
-                    </div>
+
                 </Panel>
             </div>
         );
-    }
+        }
     }
     ReactDOM.render(<Stats/>, document.getElementById('status'))
