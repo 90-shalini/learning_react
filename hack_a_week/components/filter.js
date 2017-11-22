@@ -105,25 +105,39 @@ class DB_dropdown extends React.Component {
 }
 
 class Results_table extends React.Component {
-            constructor(props) {
-                super(props);
-             }
-            render() {
-       var Table = ReactBootstrapTable.BootstrapTable;
-//       var TableHeaderColumn = ReactBootstrapTable.TableHeaderColumn;
+    constructor(props) {
+        super(props);
+     }
+    render() {
+    var Table = ReactBootstrap.Table;
        return (
-
-               <Table ref='table1' data={this.props.results}>
-                    <TableHeaderColumn dataField='zid' isKey={ true } dataSort={ true }>
-                    <a href="">Zephyr ID</a>
-                    </TableHeaderColumn>
-                    <TableHeaderColumn dataField='status'>Test Status</TableHeaderColumn>
-                    <TableHeaderColumn dataField='last_run'>Last Run</TableHeaderColumn>
-               </Table>
-
-        );
+            <Table striped bordered condensed hover>
+                <thead>
+                    <th>Zid</th>
+                    <th>Test Status</th>
+                    <th>Run</th>
+                </thead>
+                <tbody>
+                    {this.props.results.map((testcase) => (
+                        <tr>
+                            <td><a href={"http://jira/browse/" + testcase.zid}>{testcase.zid}</a></td>
+                            <td>
+                                {
+                                testcase.status.map((tc_status) => {
+                                    return (<div>{tc_status.passed?<span className="btn btn-sm btn-success"/>:
+                                    <span className="btn btn-danger"/>}</div>
+                                )
+                                })
+                                }
+                            </td>
+                            <td>{testcase.last_run}</td>
+                        </tr>)
+                    )}
+                </tbody>
+            </Table>
+       );
     }
-        }
+}
 
     ReactDOM.render(<FilterMenu/>, document.getElementById('wrapper'));
 
