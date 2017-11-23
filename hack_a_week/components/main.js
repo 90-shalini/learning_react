@@ -87,7 +87,6 @@ class MainComponent extends React.Component {
             });
         }
    render() {
-
          return (
              <div class="panel panel-lg panel-custom">
                 <div>
@@ -101,6 +100,7 @@ class MainComponent extends React.Component {
                     <Results_table results={this.state.result_list}/>
                 </div>
              </div>
+
          );
     }
 }
@@ -108,7 +108,7 @@ class MainComponent extends React.Component {
 class Stats extends React.Component{
     constructor(props){
         super(props);
-        this.state = {open: true};
+        this.state = {open: false};
     }
      render(){
         var Button = ReactBootstrap.Button;
