@@ -1,0 +1,94 @@
+
+.ProductFilter {
+     height:700px;
+     width: 20%;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+
+}
+.panel-body {
+    padding: 10px;
+
+}
+.ProductFilter__section-container {
+    margin-bottom: 20px;
+}
+.ProductFilter__section-container label {
+    display: block;
+}
+.ProductFilter__section-container select
+{
+    min-height: 30px;
+    min-width: 210px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.ProductFilter__section-container select:focus
+{
+    border: 1px solid darkred;
+}
+
+.pve_filterWrapper{
+    width: 250px;
+    float: left;
+    margin-right: 20px;
+}
+
+.pve_resultWrapper{
+    width: 900px;
+    float: left;
+}
+
+.status_column div {
+
+    float: left;
+    margin-right: 2px;
+
+}
+
+
+.pv_mini-dashboard__wrap {
+    padding: 10px;
+    overflow: auto;
+    float: left;
+    margin-right: 20px;
+
+}
+
+
+.pv_mini-dashboard__wrap.passed {
+    background: #8ab98e ;
+
+}
+
+.pv_mini-dashboard__wrap.failed {
+    background: #d46464 ;
+
+}
+
+.pv_mini-dashboard__wrap.total {
+    background: #618db4 ;
+}
+
+.pv_mini-dashboard__wrap .icon-container {
+    float: left;
+}
+
+.pv_mini-dashboard__wrap .details {
+    float: right;
+    color: #fff;
+
+}
+
+.pv_mini-dashboard__wrap .details-label, .pv_mini-dashboard__wrap .details-count  {
+    display: block;
+    margin-top: 10px
+}
+.pv_mini-dashboard__wrap .details-label {
+    font-size: 16px
+}
+
+.pv_mini-dashboard__wrap .details-count {
+    font-size: 20px;
+    text-align: center;
+}
