@@ -139,5 +139,21 @@ class Results_table extends React.Component {
     }
 }
 
+
+class ModalDialog extends React.Component{
+    constructor(props){
+        super(props);
+    }
+    render(){
+        var Modal  = ReactBootstrap.Modal;
+            return (
+                <div>
+                    <Modal>
+
+                    </Modal>
+                </div>
+            );
+    }
+}
     ReactDOM.render(<FilterMenu/>, document.getElementById('wrapper'));
 
