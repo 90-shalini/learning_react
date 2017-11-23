@@ -195,10 +195,23 @@ class DB_dropdown extends React.Component {
 }
 
 class Results_table extends React.Component {
+
     constructor(props) {
         super(props);
-        this.state = {
-            open: false};
+
+        function getStatusRow(status) {
+            if(status.passed) {
+                return <span className='btn btn-sm btn-success'/>
+            } else {
+                return <span className='btn btn-sm btn-danger'/>
+            }
+        }
+
+        this.getStatusCell = (testcase) => {
+            return <div className='status_column'>
+                {testcase.status && testcase.status.map(getStatusRow)}
+            </div>
+        }
     }
     render() {
         var Table = ReactBootstrap.Table;
@@ -214,18 +227,7 @@ class Results_table extends React.Component {
                         <tr>
                             <td><a href={"http://jira/browse/" + testcase.zid}>{testcase.zid}</a></td>
                             <td>
-                                <div className="status_column">
-                                {
-                                testcase.status.map((tc_status) => {
-                                    return
-                                        (<div>
-                                        {tc_status.passed?
-                                            <span className="btn btn-sm btn-success"/>:
-                                            <span className="btn btn-sm btn-danger"/>}
-                                        </div>)
-                                    })
-                                    }
-                                </div>
+                                {this.getStatusCell(testcase)}
                             </td>
                             <td>{testcase.last_run}</td>
                         </tr>)

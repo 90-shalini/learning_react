@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a364ecb1-4470-4b77-ab72-40372f38c949" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hack_a_week/components/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hack_a_week/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hack_a_week/components/main.js" afterPath="$PROJECT_DIR$/hack_a_week/components/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hack_a_week/css/main.css" afterPath="$PROJECT_DIR$/hack_a_week/css/main.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,22 +17,21 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hack_a_week/components/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="226" column="37" lean-forward="true" selection-start-line="226" selection-start-column="37" selection-end-line="226" selection-end-column="37" />
+            <state relative-caret-position="333">
+              <caret line="205" column="51" lean-forward="false" selection-start-line="205" selection-start-column="51" selection-end-line="205" selection-end-column="51" />
               <folding>
-                <element signature="e#0#11090#0" expanded="false" />
-                <element signature="e#0#11090#0" expanded="false" />
-                <element signature="e#0#11090#0" expanded="false" />
-                <element signature="e#0#11090#0" expanded="false" />
-                <element signature="e#0#11090#0" expanded="false" />
-                <element signature="e#0#11090#0" expanded="false" />
-                <element signature="e#0#11090#0" expanded="false" />
-                <element signature="e#0#11090#0" expanded="false" />
-                <element signature="e#0#11090#0" expanded="false" />
-                <element signature="e#0#11090#0" expanded="false" />
-                <element signature="e#0#11090#0" expanded="false" />
-                <element signature="e#0#11090#0" expanded="false" />
-                <element signature="e#0#11090#0" expanded="false" />
+                <element signature="e#0#10896#0" expanded="false" />
+                <element signature="e#0#10896#0" expanded="false" />
+                <element signature="e#0#10896#0" expanded="false" />
+                <element signature="e#0#10896#0" expanded="false" />
+                <element signature="e#0#10896#0" expanded="false" />
+                <element signature="e#0#10896#0" expanded="false" />
+                <element signature="e#0#10896#0" expanded="false" />
+                <element signature="e#0#10896#0" expanded="false" />
+                <element signature="e#0#10896#0" expanded="false" />
+                <element signature="e#0#10896#0" expanded="false" />
+                <element signature="e#0#10896#0" expanded="false" />
+                <element signature="e#0#10896#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -42,8 +40,8 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hack_a_week/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="93" column="1" lean-forward="false" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
+            <state relative-caret-position="204">
+              <caret line="42" column="16" lean-forward="true" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -61,6 +59,12 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>status_column</find>
+      <find>status</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -72,6 +76,7 @@
         <option value="$PROJECT_DIR$/hack_a_week/css/filter.css" />
         <option value="$PROJECT_DIR$/hack_a_week/src/test.html" />
         <option value="$PROJECT_DIR$/hack_a_week/components/main.js" />
+        <option value="$PROJECT_DIR$/hack_a_week/css/main.css" />
       </list>
     </option>
   </component>
@@ -189,6 +194,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/hack_a_week/components/stats.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hack_a_week/src/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
@@ -199,38 +212,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hack_a_week/components/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="226" column="37" lean-forward="true" selection-start-line="226" selection-start-column="37" selection-end-line="226" selection-end-column="37" />
+        <state relative-caret-position="333">
+          <caret line="205" column="51" lean-forward="false" selection-start-line="205" selection-start-column="51" selection-end-line="205" selection-end-column="51" />
           <folding>
-            <element signature="e#0#11090#0" expanded="false" />
-            <element signature="e#0#11090#0" expanded="false" />
-            <element signature="e#0#11090#0" expanded="false" />
-            <element signature="e#0#11090#0" expanded="false" />
-            <element signature="e#0#11090#0" expanded="false" />
-            <element signature="e#0#11090#0" expanded="false" />
-            <element signature="e#0#11090#0" expanded="false" />
-            <element signature="e#0#11090#0" expanded="false" />
-            <element signature="e#0#11090#0" expanded="false" />
-            <element signature="e#0#11090#0" expanded="false" />
-            <element signature="e#0#11090#0" expanded="false" />
-            <element signature="e#0#11090#0" expanded="false" />
-            <element signature="e#0#11090#0" expanded="false" />
+            <element signature="e#0#10896#0" expanded="false" />
+            <element signature="e#0#10896#0" expanded="false" />
+            <element signature="e#0#10896#0" expanded="false" />
+            <element signature="e#0#10896#0" expanded="false" />
+            <element signature="e#0#10896#0" expanded="false" />
+            <element signature="e#0#10896#0" expanded="false" />
+            <element signature="e#0#10896#0" expanded="false" />
+            <element signature="e#0#10896#0" expanded="false" />
+            <element signature="e#0#10896#0" expanded="false" />
+            <element signature="e#0#10896#0" expanded="false" />
+            <element signature="e#0#10896#0" expanded="false" />
+            <element signature="e#0#10896#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hack_a_week/components/stats.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hack_a_week/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="93" column="1" lean-forward="false" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
+        <state relative-caret-position="204">
+          <caret line="42" column="16" lean-forward="true" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
           <folding />
         </state>
       </provider>
