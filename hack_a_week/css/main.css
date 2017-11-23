@@ -39,9 +39,9 @@
     float: left;
 }
 
-.status_column div{
+.status_column div span{
     float: left;
-    margin-left: 5px;
+    margin-left: 2px;
 }
 
 

@@ -87,9 +87,7 @@ class MainComponent extends React.Component {
             });
         }
    render() {
-        var Panel = ReactBootstrap.Panel;
-        var Button = ReactBootstrap.Button;
-        var Glyphicon = ReactBootstrap.Glyphicon;
+
          return (
              <div class="panel panel-lg panel-custom">
                 <div>
@@ -208,7 +206,7 @@ class Results_table extends React.Component {
         }
 
         this.getStatusCell = (testcase) => {
-            return <div className='status_column'>
+            return <div>
                 {testcase.status && testcase.status.map(getStatusRow)}
             </div>
         }
@@ -226,8 +224,12 @@ class Results_table extends React.Component {
                     {this.props.results.map((testcase) => (
                         <tr>
                             <td><a href={"http://jira/browse/" + testcase.zid}>{testcase.zid}</a></td>
-                            <td>
-                                {this.getStatusCell(testcase)}
+
+                                <td>
+                                    <div className="status_column">
+                                        {this.getStatusCell(testcase)}
+                                    </div>
+
                             </td>
                             <td>{testcase.last_run}</td>
                         </tr>)

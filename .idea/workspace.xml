@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a364ecb1-4470-4b77-ab72-40372f38c949" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hack_a_week/components/main.js" afterPath="$PROJECT_DIR$/hack_a_week/components/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hack_a_week/css/main.css" afterPath="$PROJECT_DIR$/hack_a_week/css/main.css" />
-    </list>
+    <list default="true" id="0ee47fbd-d584-4201-a2f6-7be018a44986" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,57 +9,35 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/hack_a_week$hack_html.coverage" NAME="hack.html Coverage Results" MODIFIED="1511158624463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/html" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hack_a_week/components/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="205" column="51" lean-forward="false" selection-start-line="205" selection-start-column="51" selection-end-line="205" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#10896#0" expanded="false" />
-                <element signature="e#0#10896#0" expanded="false" />
-                <element signature="e#0#10896#0" expanded="false" />
-                <element signature="e#0#10896#0" expanded="false" />
-                <element signature="e#0#10896#0" expanded="false" />
-                <element signature="e#0#10896#0" expanded="false" />
-                <element signature="e#0#10896#0" expanded="false" />
-                <element signature="e#0#10896#0" expanded="false" />
-                <element signature="e#0#10896#0" expanded="false" />
-                <element signature="e#0#10896#0" expanded="false" />
-                <element signature="e#0#10896#0" expanded="false" />
-                <element signature="e#0#10896#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hack_a_week/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="42" column="16" lean-forward="true" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hack_a_week/src/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>status_column</find>
-      <find>status</find>
+      <find>Sort By ABV</find>
+      <find>sort by</find>
+      <find>enviornment</find>
+      <find>dat</find>
+      <find>Option</find>
+      <find>this.props</find>
+      <find>table_fail</find>
+      <find>total_tests</find>
+      <find>.idea</find>
+      <find>pve_filterWrapper</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -71,23 +46,45 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/html/hack.html.py" />
+        <option value="$PROJECT_DIR$/js/component/script.js" />
+        <option value="$PROJECT_DIR$/html/script.js" />
+        <option value="$PROJECT_DIR$/js/component/checkboxgroup.js" />
+        <option value="$PROJECT_DIR$/css/filter.css" />
+        <option value="$PROJECT_DIR$/js/component/panel.js" />
+        <option value="$PROJECT_DIR$/js/component/product_filter.js" />
+        <option value="$PROJECT_DIR$/html/hack.html" />
+        <option value="$PROJECT_DIR$/js/component/test.js" />
+        <option value="$PROJECT_DIR$/application/base.html" />
+        <option value="$PROJECT_DIR$/components/stats.js" />
+        <option value="$PROJECT_DIR$/components/filter.js" />
+        <option value="$PROJECT_DIR$/src/test.html" />
+        <option value="$PROJECT_DIR$/components/table.js" />
+        <option value="$PROJECT_DIR$/hack_a_week/css/base.css" />
+        <option value="$PROJECT_DIR$/hack_a_week/css/stats.css.js" />
+        <option value="$PROJECT_DIR$/hack_a_week/css/stats.css" />
         <option value="$PROJECT_DIR$/hack_a_week/components/filter.js" />
-        <option value="$PROJECT_DIR$/hack_a_week/components/main_component.js" />
         <option value="$PROJECT_DIR$/hack_a_week/css/filter.css" />
-        <option value="$PROJECT_DIR$/hack_a_week/src/test.html" />
-        <option value="$PROJECT_DIR$/hack_a_week/components/main.js" />
-        <option value="$PROJECT_DIR$/hack_a_week/css/main.css" />
+        <option value="$PROJECT_DIR$/hack_a_week/components/stats.js" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="y" value="7" />
-    <option name="width" value="1366" />
-    <option name="height" value="728" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="14" />
+    <option name="y" value="10" />
+    <option name="width" value="1598" />
+    <option name="height" value="898" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -101,41 +98,76 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <expand>
-            <path>
-              <item name="react_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react_project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react_project" type="462c0819:PsiDirectoryNode" />
-              <item name="hack_a_week" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react_project" type="462c0819:PsiDirectoryNode" />
-              <item name="hack_a_week" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react_project" type="462c0819:PsiDirectoryNode" />
-              <item name="hack_a_week" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hack_a_week" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hack_a_week" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hack_a_week" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hack_a_week" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hack_a_week" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="hack_a_week">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="hack_a_week">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="ignore_missing_gitignore" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hack_a_week" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\hack_a_week" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\hack_a_week\html" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -149,92 +181,496 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Python.hack.html">
+    <configuration default="false" name="hack.html" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/html" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="hack_a_week" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/html/hack.html.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="hack_a_week" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="hack_a_week" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="hack_a_week" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="hack_a_week" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <module name="hack_a_week" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="hack_a_week" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="hack_a_week" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="hack_a_week" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.hack.html" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.hack.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a364ecb1-4470-4b77-ab72-40372f38c949" name="Default" comment="" />
-      <created>1511408327070</created>
+      <changelist id="0ee47fbd-d584-4201-a2f6-7be018a44986" name="Default" comment="" />
+      <created>1511153620706</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1511408327070</updated>
+      <updated>1511153620706</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="14" y="10" width="1598" height="898" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2841772" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996207" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hack_a_week/components/stats.js">
+    <entry file="file://$PROJECT_DIR$/html/hack.html.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/react.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2772">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/component/checkboxgroup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Sprint/longhorn/automation/website/app/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Sprint/longhorn/automation/website/app/templates/exception.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Sprint/longhorn/automation/website/app/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Sprint/longhorn/automation/website/app/templates/integ_logs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Sprint/longhorn/automation/website/app/templates/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/filter.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="64" lean-forward="false" selection-start-line="4" selection-start-column="64" selection-end-line="4" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/component/panel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/hack.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/component/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1143">
+          <caret line="74" column="4" lean-forward="false" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/component/product_filter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/navbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="32" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/filter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1936">
+          <caret line="88" column="56" lean-forward="false" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/stats.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="85" lean-forward="false" selection-start-line="6" selection-start-column="85" selection-end-line="6" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="96" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hack_a_week/application/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hack_a_week/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hack_a_week/css/stats.css.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hack_a_week/src/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        <state relative-caret-position="315">
+          <caret line="15" column="52" lean-forward="true" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hack_a_week/components/main.js">
+    <entry file="file://$PROJECT_DIR$/hack_a_week/css/sidenav.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="205" column="51" lean-forward="false" selection-start-line="205" selection-start-column="51" selection-end-line="205" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#10896#0" expanded="false" />
-            <element signature="e#0#10896#0" expanded="false" />
-            <element signature="e#0#10896#0" expanded="false" />
-            <element signature="e#0#10896#0" expanded="false" />
-            <element signature="e#0#10896#0" expanded="false" />
-            <element signature="e#0#10896#0" expanded="false" />
-            <element signature="e#0#10896#0" expanded="false" />
-            <element signature="e#0#10896#0" expanded="false" />
-            <element signature="e#0#10896#0" expanded="false" />
-            <element signature="e#0#10896#0" expanded="false" />
-            <element signature="e#0#10896#0" expanded="false" />
-            <element signature="e#0#10896#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hack_a_week/css/main.css">
+    <entry file="file://$PROJECT_DIR$/hack_a_week/components/filter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="42" column="16" lean-forward="true" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+        <state relative-caret-position="1276">
+          <caret line="58" column="39" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5390">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hack_a_week/components/stats.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hack_a_week/css/stats.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hack_a_week/css/filter.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2300">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
           <folding />
         </state>
       </provider>
