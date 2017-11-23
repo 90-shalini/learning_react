@@ -14,6 +14,7 @@ body {
 .ProductFilter__section-container {
     margin-bottom: 20px;
 }
+
 .ProductFilter__section-container label {
     display: block;
 }
@@ -34,6 +35,7 @@ body {
     width: 250px;
     float: left;
     margin-right: 20px;
+    border:1px solid;
 }
 
 .pve_resultWrapper{
@@ -107,5 +109,6 @@ body {
 .name-header {
     padding: 5px 10px;
     border-right: 1px solid #ddd;
+    width:100px;
 
 }
