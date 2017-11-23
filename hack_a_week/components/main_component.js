@@ -194,7 +194,6 @@ class Results_table extends React.Component {
     handleStatusClick(event) =>{
         this.setState({open: !this.state.open })})
     }
-    }
     render() {
         var Table = ReactBootstrap.Table;
            return (
