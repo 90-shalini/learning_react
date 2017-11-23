@@ -1,4 +1,6 @@
-
+body {
+    padding:10px;
+}
 .ProductFilter {
      height:700px;
      width: 20%;
@@ -39,9 +41,9 @@
     float: left;
 }
 
-.status_column div{
+.status_column div button{
     float: left;
-    margin-left: 5px;
+    margin-left: 2px;
 }
 
 
@@ -70,11 +72,22 @@
 
 .pv_mini-dashboard__wrap .icon-container {
     float: left;
+    background: white;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
 }
 
-.pv_mini-dashboard__wrap .details {
+
+.pv_mini-dashboard__wrap .icon-container span{
+    margin:7px;
+}
+
+.pv_mini-dashboard__wrap.details {
     float: right;
     color: #fff;
+    margin-top: -19px;
+    margin-right: -7px;
 
 }
 
@@ -89,4 +102,10 @@
 .pv_mini-dashboard__wrap .details-count {
     font-size: 20px;
     text-align: center;
+}
+
+.name-header {
+    padding: 5px 10px;
+    border-right: 1px solid #ddd;
+
 }
