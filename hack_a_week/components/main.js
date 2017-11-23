@@ -199,7 +199,7 @@ class Results_table extends React.Component {
 
         function getStatusRow(status) {
             if(status.passed) {
-                return <span className='btn btn-sm btn-outline-success'/>
+                return <span className='btn btn-sm btn-success'/>
             } else {
                 return <span className='btn btn-sm btn-danger'/>
             }
