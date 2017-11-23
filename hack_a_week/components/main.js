@@ -27,7 +27,6 @@ class MainComponent extends React.Component {
                                 this.state.selectedDatabase;
           var stats_url = 'http://'+window.location.hostname+':5000/ui/stats/' + this.state.selectedEnvironment +'/'+
                             this.state.selectedDatabase;
-           console.log(stats_url);
            axios.get(results_url)
                 .then(results_response => {
                     this.setState({result_list: results_response.data});
@@ -39,8 +38,6 @@ class MainComponent extends React.Component {
            axios.get(stats_url)
                 .then(stats_response => {
                     this.setState({stats_data: stats_response.data});
-                    console.log(stats_response.data);
-                    console.log(this.state.stats_data);
                 })
                 .catch(function (error){
                     console.log(error)
@@ -57,8 +54,7 @@ class MainComponent extends React.Component {
                             axios.get(db_url)
                                 .then(response => {
                                     this.setState({db_list: response.data},()=>{
-                                        var results_url = 'http://'+window.location.hostname+':5000/ui/tests/' + this.state.env_list[0] +'/'+
-                                                                    this.state.db_list[0];
+                                        var results_url = 'http://'+window.location.hostname+':5000/ui/tests/' + this.state.env_list[0] +'/'+this.state.db_list[0];
                                         var stats_url = 'http://'+window.location.hostname+':5000/ui/stats/' + this.state.env_list[0] +'/'+
                                                                 this.state.db_list[0];
                                         axios.get(stats_url)
@@ -193,19 +189,18 @@ class Results_table extends React.Component {
         super(props);
         this.state={
             modalDisplay: false,
-            step_details:[]}
+            step_details:[],
+            uuid:''}
     }
     getStatusRow =(status) => {
-
             if(status.passed) {
                 return(
                 <div>
-                    <button className='btn btn-sm btn-success' onClick={(event)=> this.handleStatusClick(event)}/>
-
+                    <button className='btn btn-sm btn-success' onClick={(event)=> this.handleStatusClick(event, status.uuid)}/>
                 </div>
                 )
             } else {
-                return <button className='btn btn-sm btn-danger'/>
+                return<div> <button className='btn btn-sm btn-danger' onClick={(event)=> this.handleStatusClick(event, status.uuid)}/></div>
             }
         }
     getStatusCell = (testcase) => {
@@ -221,8 +216,8 @@ class Results_table extends React.Component {
         </span>
     }
 
-    handleStatusClick =(event)=>{
-        this.setState({modalDisplay: true})
+    handleStatusClick =(event, uuid)=>{
+        this.setState({modalDisplay: true, uuid: uuid})
     }
     handleModalDisplay = (event) => {
         this.setState({modalDisplay: false})
@@ -233,14 +228,14 @@ class Results_table extends React.Component {
            return (<div>
                 <Table striped bordered condensed hover>
                     <thead>
-                        <th className="name-header" column="zid">ZID</th>
-                        <th className="name-header" column="status">Test Status</th>
-                        <th className="name-header" column="run">Last Run</th>
+                        <th className="name-header" column="Zid">ZID</th>
+                        <th className="name-header" column="Status">Test Status</th>
+                        <th className="name-header" column="Last run">Last Run</th>
                     </thead>
                     <tbody>
                     {this.props.results.map((testcase) => (
                         <tr>
-                            <td><a href={"http://jira/browse/" + testcase.zid}>{testcase.zid}</a></td>
+                            <td><a target="_blank" href={"http://jira/browse/" + testcase.zid}>{testcase.zid}</a></td>
                             <td>
                                 <div className="status_column">
                                     {this.getStatusCell(testcase)}
@@ -257,7 +252,7 @@ class Results_table extends React.Component {
                 </Table>
                  {this.state.modalDisplay && (
                  <div>
-                    <ModalDialog showModal={this.state.modalDisplay} onClickButton={this.handleModalDisplay}/>
+                    <ModalDialog showModal={this.state.modalDisplay} uuid = {this.state.uuid} onClickButton={this.handleModalDisplay}/>
                 </div>)}
                 </div>
            );
@@ -268,21 +263,67 @@ class ModalDialog extends React.Component{
     constructor(props){
         super(props);
         this.state={
-        open: this.props.showModal};
+        open: this.props.showModal,
+        uuid: this.props.uuid,
+        step_details:[]
+        };
+    }
+    componentDidMount(){
+    var step_details_url = 'http://'+window.location.hostname+':5000/ui/test/'
+    +this.state.uuid
+    axios.get(step_details_url)
+        .then(response => {
+            this.setState({step_details: response.data});
+         })
+        .catch(function (error){
+            console.log(error)
+        });
     }
 
+    get_step_status= (status) =>{
+    console.log(status)
+        if(status) {
+        return(
+        <div>
+            <button className='btn btn-sm btn-success'/>
+                </div>)
+            } else {
+        return(<div>
+            <button className='btn btn-sm btn-danger'/>
+                </div>)
+            }
+    }
     render(){
-        var Modal  = ReactBootstrap.Modal;
+        var Modal= ReactBootstrap.Modal;
+        var Table= ReactBootstrap.Table;
             return (<div>
             <Modal show={this.state.open} onHide={this.props.onClickButton}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Test Case ID: 12345</Modal.Title>
+                    <Modal.Title>{this.state.step_details.zid}</Modal.Title>
+                    <div><span>Space for screenshot and last run</span></div>
                 </Modal.Header>
                 <Modal.Body>
-                    <h4>Text in a modal</h4>
+                    <Table striped bordered condensed hover>
+                        <thead>
+                          <tr>
+                            <th>Status</th>
+                            <th>Step Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                           {this.state.step_details.steps
+                           && this.state.step_details.steps.map((step) => {
+                           console.log(step)
+                            return <tr>
+                                        <td>{this.get_step_status(step.passed)}</td>
+                                        <td>{step.step_desc}</td>
+                                   </tr>
+
+                            })}</tbody>
+                  </Table>
                 </Modal.Body>
                 <Modal.Footer>
-                    <h4>Text in a modal footer</h4>
+                    <h4>can add screenshot here</h4>
                 </Modal.Footer>
             </Modal></div>
             );
