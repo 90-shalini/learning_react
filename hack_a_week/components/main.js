@@ -196,6 +196,7 @@ class Results_table extends React.Component {
             step_details:[]}
     }
     getStatusRow =(status) => {
+
             if(status.passed) {
                 return(
                 <div>
@@ -208,9 +209,16 @@ class Results_table extends React.Component {
             }
         }
     getStatusCell = (testcase) => {
-        return <div>
+       return <div>
             {testcase.status && testcase.status.map(this.getStatusRow)}
         </div>
+    }
+    getDate = (last_run) => {
+        this.cdate = (new Date(last_run)).toString();
+        this.cdate1=this.cdate.split('GMT')[0].toString();
+        return <span>
+            {this.cdate1}
+        </span>
     }
     handleStatusClick =(event, uuid)=>{
         this.setState({modalDisplay: true})
@@ -239,7 +247,11 @@ class Results_table extends React.Component {
                                     {this.getStatusCell(testcase)}
                                 </div>
                             </td>
-                            <td>{testcase.last_run}</td>
+                            <td>
+                                <div>
+                                    {this.getDate(testcase.last_run)}
+                                </div>
+                            </td>
                         </tr>)
                     )}
                 </tbody>
@@ -261,7 +273,7 @@ class ModalDialog extends React.Component{
             <Modal>
                 <Modal.Header closeButton>
                     <Modal.Title>Modal heading</Modal.Title>
-                </Modal.Header
+                </Modal.Header>
             </Modal>
             );
     }

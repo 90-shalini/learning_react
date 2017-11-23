@@ -35,7 +35,8 @@ body {
     width: 250px;
     float: left;
     margin-right: 20px;
-    border:1px solid;
+    border: 1px solid #ddd;
+    padding: 15px;
 }
 
 .pve_resultWrapper{
