@@ -120,10 +120,6 @@ class Stats extends React.Component{
                             <Panel collapsible defaultExpanded expanded ={this.state.open} header="Stats"
                             onClick={() => this.setState({ open: !this.state.open })}>
                             <Glyphicon bsStyle="Info" className="glyphicon" glyph="chevron-down"/>
-                            {/*</Button>*/}
-
-
-
                          <div className="pv_mini-dashboard__wrap total">
                               <div className="icon-container">
                                 <Glyphicon bsStyle="info" className="glyphicon" glyph="info-sign"/>
@@ -193,27 +189,41 @@ class DB_dropdown extends React.Component {
 }
 
 class Results_table extends React.Component {
-
     constructor(props) {
         super(props);
-
-        function getStatusRow(status) {
+        this.state={
+            modalDisplay: false,
+            step_details:[]}
+    }
+    getStatusRow =(status) => {
             if(status.passed) {
-                return <span className='btn btn-sm btn-success'/>
+                return(
+                <div>
+                    <button className='btn btn-sm btn-success' onClick={(event)=> this.handleStatusClick                        (event, status.uuid)}/>
+                    {this.state.modalDisplay && this.getModal()}
+                </div>
+                )
             } else {
-                return <span className='btn btn-sm btn-danger'/>
+                return <button className='btn btn-sm btn-danger'/>
             }
         }
-
-        this.getStatusCell = (testcase) => {
-            return <div>
-                {testcase.status && testcase.status.map(getStatusRow)}
-            </div>
-        }
+    getStatusCell = (testcase) => {
+        return <div>
+            {testcase.status && testcase.status.map(this.getStatusRow)}
+        </div>
     }
+    handleStatusClick =(event, uuid)=>{
+        this.setState({modalDisplay: true})
+    }
+
+    getModal= () => {
+                return(<div>
+                    <ModalDialog modalStatus={this.state.modalDisplay}/>
+                </div>)
+              }
     render() {
         var Table = ReactBootstrap.Table;
-           return (
+           return (<div>
                 <Table striped bordered condensed hover>
                     <thead>
                         <th className="name-header" column="zid">ZID</th>
@@ -224,18 +234,17 @@ class Results_table extends React.Component {
                     {this.props.results.map((testcase) => (
                         <tr>
                             <td><a href={"http://jira/browse/" + testcase.zid}>{testcase.zid}</a></td>
-
-                                <td>
-                                    <div className="status_column">
-                                        {this.getStatusCell(testcase)}
-                                    </div>
-
+                            <td>
+                                <div className="status_column">
+                                    {this.getStatusCell(testcase)}
+                                </div>
                             </td>
                             <td>{testcase.last_run}</td>
                         </tr>)
                     )}
                 </tbody>
                 </Table>
+                </div>
            );
     }
 }
@@ -243,20 +252,17 @@ class Results_table extends React.Component {
 class ModalDialog extends React.Component{
     constructor(props){
         super(props);
+        console.log('In modal!!')
+        console.log(this.props.modalStatus)
     }
     render(){
         var Modal  = ReactBootstrap.Modal;
             return (
-                <div>
-                    <Modal>
-                        <Modal.Header closeButton>
-                            <Modal.Title>Modal heading</Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body>
-                            <h1>My Modal dialog</h1>
-                        </Modal.Body>
-                    </Modal>
-                </div>
+            <Modal>
+                <Modal.Header closeButton>
+                    <Modal.Title>Modal heading</Modal.Title>
+                </Modal.Header
+            </Modal>
             );
     }
 }
