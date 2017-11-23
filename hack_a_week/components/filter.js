@@ -53,13 +53,13 @@ class FilterMenu extends React.Component {
          return (
              <div class="panel panel-lg panel-custom">
                 <div id="filterPane" className="pve_filterWrapper">
-                  <Button onClick={()=>this.setState({open:!this.state.open})}>
-                    <Glyphicon bsStyle="Info" className="glyphicon" glyph="filter"/>
-                </Button>
-                  <Panel collapsible defaultExpanded expanded={this.state.open}>
+                  {/*<Button onClick={()=>this.setState({open:!this.state.open})}>*/}
+                    {/*<Glyphicon bsStyle="Info" className="glyphicon" glyph="filter"/>*/}
+                {/*</Button>*/}
+                  {/*<Panel collapsible defaultExpanded col={this.state.open}>*/}
                         <Env_dropdown envs={this.state.env_list} onChangeSelection={this.handleEnvChange}/>
                         <DB_dropdown db={this.state.db_list} onChangeSelection={this.handleDbChange}/>
-                  </Panel>
+                  {/*</Panel>*/}
                 </div>
                 <div id="resultsTable" className="pve_resultWrapper">
                    <Results_table results={this.state.result_list}/>
