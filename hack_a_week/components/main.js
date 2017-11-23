@@ -115,26 +115,26 @@ class Stats extends React.Component{
         var Panel = ReactBootstrap.Panel;
         var Glyphicon = ReactBootstrap.Glyphicon;
             return (
-                <div>
+
                     <div className="test_status">
-                            <Button bsSize="xsmall"
+                            <Panel collapsible defaultExpanded expanded ={this.state.open} header="Stats"
                             onClick={() => this.setState({ open: !this.state.open })}>
                             <Glyphicon bsStyle="Info" className="glyphicon" glyph="chevron-down"/>
-                            </Button>
-                    </div>
-                    <Panel collapsible defaultExpanded expanded={this.state.open}>
+                            {/*</Button>*/}
+
+
+
                          <div className="pv_mini-dashboard__wrap total">
-                              <div className="pv_mini-dashboard__wrap icon-container">
+                              <div className="icon-container">
                                 <Glyphicon bsStyle="info" className="glyphicon" glyph="info-sign"/>
                               </div>
                               <div className="pv_mini-dashboard__wrap details">
                                 <span className="details-count">{this.props.stats['total']}</span>
                                   <span className="details-label"> Total</span>
-
+                              </div>
                              </div>
-                          </div>
-                         <div className="pv_mini-dashboard__wrap passed">
-                              <div className="pv_mini-dashboard__wrap icon-container">
+                        <div className="pv_mini-dashboard__wrap passed">
+                              <div className="icon-container">
                                 <Glyphicon bsStyle="success" className="glyphicon" glyph="ok"/>
                               </div>
                               <div className="pv_mini-dashboard__wrap details">
@@ -143,7 +143,7 @@ class Stats extends React.Component{
                               </div>
                           </div>
                          <div className="pv_mini-dashboard__wrap failed">
-                              <div className="pv_mini-dashboard__wrap icon-container">
+                              <div className="icon-container">
                                 <Glyphicon bsStyle="danger" className="glyphicon" glyph="remove"/>
                               </div>
                               <div className="pv_mini-dashboard__wrap details">
@@ -199,7 +199,7 @@ class Results_table extends React.Component {
 
         function getStatusRow(status) {
             if(status.passed) {
-                return <span className='btn btn-sm btn-success'/>
+                return <span className='btn btn-sm btn-outline-success'/>
             } else {
                 return <span className='btn btn-sm btn-danger'/>
             }
@@ -216,9 +216,9 @@ class Results_table extends React.Component {
            return (
                 <Table striped bordered condensed hover>
                     <thead>
-                        <th>Zid</th>
-                        <th>Test Status</th>
-                        <th>Run</th>
+                        <th className="name-header" column="zid">ZID</th>
+                        <th className="name-header" column="status">Test Status</th>
+                        <th className="name-header" column="run">Run</th>
                     </thead>
                     <tbody>
                     {this.props.results.map((testcase) => (
