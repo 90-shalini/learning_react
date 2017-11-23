@@ -200,8 +200,8 @@ class Results_table extends React.Component {
             if(status.passed) {
                 return(
                 <div>
-                    <button className='btn btn-sm btn-success' onClick={(event)=> this.handleStatusClick                        (event, status.uuid)}/>
-                    {this.state.modalDisplay && this.getModal()}
+                    <button className='btn btn-sm btn-success' onClick={(event)=> this.handleStatusClick(event)}/>
+
                 </div>
                 )
             } else {
@@ -220,15 +220,14 @@ class Results_table extends React.Component {
             {this.cdate1}
         </span>
     }
-    handleStatusClick =(event, uuid)=>{
+
+    handleStatusClick =(event)=>{
         this.setState({modalDisplay: true})
     }
+    handleModalDisplay = (event) => {
+        this.setState({modalDisplay: false})
+    }
 
-    getModal= () => {
-                return(<div>
-                    <ModalDialog modalStatus={this.state.modalDisplay}/>
-                </div>)
-              }
     render() {
         var Table = ReactBootstrap.Table;
            return (<div>
@@ -236,7 +235,7 @@ class Results_table extends React.Component {
                     <thead>
                         <th className="name-header" column="zid">ZID</th>
                         <th className="name-header" column="status">Test Status</th>
-                        <th className="name-header" column="run">Run</th>
+                        <th className="name-header" column="run">Last Run</th>
                     </thead>
                     <tbody>
                     {this.props.results.map((testcase) => (
@@ -256,6 +255,10 @@ class Results_table extends React.Component {
                     )}
                 </tbody>
                 </Table>
+                 {this.state.modalDisplay && (
+                 <div>
+                    <ModalDialog showModal={this.state.modalDisplay} onClickButton={this.handleModalDisplay}/>
+                </div>)}
                 </div>
            );
     }
@@ -264,17 +267,24 @@ class Results_table extends React.Component {
 class ModalDialog extends React.Component{
     constructor(props){
         super(props);
-        console.log('In modal!!')
-        console.log(this.props.modalStatus)
+        this.state={
+        open: this.props.showModal};
     }
+
     render(){
         var Modal  = ReactBootstrap.Modal;
-            return (
-            <Modal>
+            return (<div>
+            <Modal show={this.state.open} onHide={this.props.onClickButton}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title>Test Case ID: 12345</Modal.Title>
                 </Modal.Header>
-            </Modal>
+                <Modal.Body>
+                    <h4>Text in a modal</h4>
+                </Modal.Body>
+                <Modal.Footer>
+                    <h4>Text in a modal footer</h4>
+                </Modal.Footer>
+            </Modal></div>
             );
     }
 }
