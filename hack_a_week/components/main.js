@@ -47,8 +47,7 @@ class MainComponent extends React.Component {
    }
    componentWillMount(){
         var env_list_url = 'http://'+window.location.hostname+':5000/ui';
-        axios.get(env_list_url)
-            .then(response => {
+        axios.get(env_list_url).then(response => {
                 this.setState({env_list: response.data}, () => {
                         var db_url = 'http://'+window.location.hostname+':5000/ui/'+ this.state.env_list[0];
                             axios.get(db_url)
@@ -293,6 +292,15 @@ class ModalDialog extends React.Component{
                 </div>)
             }
     }
+    get_screenshot = (status)=>{
+         if(!status) {
+        return(
+        <div>
+            <button>Screenshot</button>
+                </div>)
+            }
+    }
+
     render(){
         var Modal= ReactBootstrap.Modal;
         var Table= ReactBootstrap.Table;
@@ -300,7 +308,10 @@ class ModalDialog extends React.Component{
             <Modal show={this.state.open} onHide={this.props.onClickButton}>
                 <Modal.Header closeButton>
                     <Modal.Title>{this.state.step_details.zid}</Modal.Title>
-                    <div><span>Space for screenshot and last run</span></div>
+                    <div>
+                    <span>{this.state.step_details.date}</span>
+                    <span>{this.get_screenshot(this.state.step_details.passed)}</span>
+                    </div>
                 </Modal.Header>
                 <Modal.Body>
                     <Table striped bordered condensed hover>
@@ -322,9 +333,6 @@ class ModalDialog extends React.Component{
                             })}</tbody>
                   </Table>
                 </Modal.Body>
-                <Modal.Footer>
-                    <h4>can add screenshot here</h4>
-                </Modal.Footer>
             </Modal></div>
             );
     }
