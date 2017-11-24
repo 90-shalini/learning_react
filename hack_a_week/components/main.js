@@ -196,12 +196,17 @@ class Results_table extends React.Component {
             if(status.passed) {
                 return(
                 <div>
-                    <button className='btn btn-sm btn-success' onClick={(event)=> this.handleStatusClick(event, status.uuid)}/>
+                    <button className='btn btn-sm btn-success' onClick={(event)=> this.handleStatusClick(event, status.uuid)}>
+
+                        </button>
                 </div>
                 )
             } else {
-                return<div> <button className='btn btn-sm btn-danger' onClick={(event)=> this.handleStatusClick(event, status.uuid)}/></div>
-            }
+                return(
+                <div> <button className='btn btn-sm btn-danger' onClick={(event)=> this.handleStatusClick(event, status.uuid)}>
+                </button>
+                </div>
+                )}
         }
     getStatusCell = (testcase) => {
        return <div>

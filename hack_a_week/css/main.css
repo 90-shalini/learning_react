@@ -1,6 +1,9 @@
 body {
     padding:10px;
 }
+#pve_navbar{
+    padding:2px
+}
 .ProductFilter {
      height:700px;
      width: 20%;
@@ -43,6 +46,24 @@ body {
     width: 900px;
     float: left;
 }
+
+.status_column div button{
+    float: left;
+    margin-left: 2px;
+}
+
+.status_column .btn-success {
+    color: #fff;
+    background-color: #8aba8e;
+    border-color: #8aba8e;
+}
+
+.status_column .btn-danger {
+    color: #fff;
+    background-color: #d46363;
+    border-color: #d46363;
+}
+
 
 .status_column div button{
     float: left;
@@ -111,5 +132,6 @@ body {
     padding: 5px 10px;
     border-right: 1px solid #ddd;
     width:100px;
+    background-color:#fff;
 
 }
