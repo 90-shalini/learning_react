@@ -1,5 +1,6 @@
 body {
-    padding:10px;
+
+    margin: 0 auto;
 }
 #pve_navbar{
     padding:2px;
@@ -76,6 +77,7 @@ body {
     overflow: auto;
     float: left;
     margin-right: 20px;
+    min-width: 100px;
 
 }
 
@@ -117,10 +119,11 @@ body {
 
 .pv_mini-dashboard__wrap .details-label, .pv_mini-dashboard__wrap .details-count  {
     display: block;
-    margin-top: 10px
+    margin-top: 10px;
+    text-align: center;
 }
 .pv_mini-dashboard__wrap .details-label {
-    font-size: 10px
+    font-size: 14px
 }
 
 .pv_mini-dashboard__wrap .details-count {
@@ -134,4 +137,20 @@ body {
     width:100px;
     background-color:#fff;
 
+}
+
+.stepStatusPass .btn-success{
+    color: #fff;
+    background-color: #8aba8e;
+    border-color: #8aba8e;
+}
+
+.stepStatusPass .btn-danger{
+    color: #fff;
+    background-color: #d46363;
+    border-color: #d46363;
+}
+
+#wrapper {
+    padding: 10px;
 }

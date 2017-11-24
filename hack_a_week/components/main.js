@@ -114,8 +114,7 @@ class Stats extends React.Component{
                     <div className="test_status">
                             <Panel collapsible defaultExpanded expanded ={this.state.open} header="Stats"
                             onClick={() => this.setState({ open: !this.state.open })}>
-                            <Glyphicon bsStyle="Info" className="glyphicon" glyph="chevron-down"/>
-                         <div className="pv_mini-dashboard__wrap total">
+                           <div className="pv_mini-dashboard__wrap total">
                               <div className="icon-container">
                                 <Glyphicon bsStyle="info" className="glyphicon" glyph="info-sign"/>
                               </div>
@@ -273,8 +272,7 @@ class ModalDialog extends React.Component{
         };
     }
     componentDidMount(){
-    var step_details_url = 'http://'+window.location.hostname+':5000/ui/test/'
-    +this.state.uuid
+    let step_details_url = 'http://'+window.location.hostname+':5000/ui/test/'+this.state.uuid
     axios.get(step_details_url)
         .then(response => {
             this.setState({step_details: response.data});
@@ -288,11 +286,11 @@ class ModalDialog extends React.Component{
     console.log(status)
         if(status) {
         return(
-        <div id="stepStatusPass">
+        <div className="stepStatusPass">
             <button className='btn btn-sm btn-success'/>
                 </div>)
             } else {
-        return(<div id="stepStatusFail">
+        return(<div className="stepStatusFail">
             <button className='btn btn-sm btn-danger'/>
                 </div>)
             }
@@ -311,7 +309,7 @@ class ModalDialog extends React.Component{
         var Table= ReactBootstrap.Table;
             return (<div>
             <Modal show={this.state.open} onHide={this.props.onClickButton}>
-                <div id="modalHeader">
+                <div className="modalHeader">
                      <Modal.Header closeButton>
                     <span><h4>{this.state.step_details.zid}</h4></span>
                     <span>{this.state.step_details.date}</span>
