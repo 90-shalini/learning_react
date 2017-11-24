@@ -283,11 +283,11 @@ class ModalDialog extends React.Component{
     console.log(status)
         if(status) {
         return(
-        <div>
+        <div id="stepStatusPass">
             <button className='btn btn-sm btn-success'/>
                 </div>)
             } else {
-        return(<div>
+        return(<div id="stepStatusFail">
             <button className='btn btn-sm btn-danger'/>
                 </div>)
             }
@@ -295,7 +295,7 @@ class ModalDialog extends React.Component{
     get_screenshot = (status)=>{
          if(!status) {
         return(
-        <div>
+        <div id="screenshotButton">
             <button>Screenshot</button>
                 </div>)
             }
@@ -306,13 +306,13 @@ class ModalDialog extends React.Component{
         var Table= ReactBootstrap.Table;
             return (<div>
             <Modal show={this.state.open} onHide={this.props.onClickButton}>
-                <Modal.Header closeButton>
-                    <Modal.Title>{this.state.step_details.zid}</Modal.Title>
-                    <div>
+                <div id="modalHeader">
+                     <Modal.Header closeButton>
+                    <span><h4>{this.state.step_details.zid}</h4></span>
                     <span>{this.state.step_details.date}</span>
                     <span>{this.get_screenshot(this.state.step_details.passed)}</span>
-                    </div>
-                </Modal.Header>
+                    </Modal.Header>
+              </div>
                 <Modal.Body>
                     <Table striped bordered condensed hover>
                         <thead>
